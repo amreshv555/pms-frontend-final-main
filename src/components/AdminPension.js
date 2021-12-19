@@ -115,7 +115,7 @@ const PensionDetails = props => {
                 <p><h3>Display Pension Details</h3></p>
 
                 <form className="form form-group form-primary " onSubmit={submitDisplayPension}>
-                    <input className="form-control mt-4" type="number" id="displayPensionObj" name="displayPensionObj" value={displayPensionObj} onChange={handleDisplayPension} placeholder="Enter Pensioner Id to display the details" />
+                    <input className="form-control mt-4" type="number" pattern="[0-9]" min='1' id="displayPensionObj" name="displayPensionObj" value={displayPensionObj} onChange={handleDisplayPension} placeholder="Enter Pensioner Id to display the details" required autoFocus/>
                     <input className="form-control mt-4 btn btn-primary" type="submit" name="Find Pension" onClick={submitDisplayPension} />
                 </form>
 
@@ -155,7 +155,7 @@ const PensionDetails = props => {
                     <p><h3>Delete Pension Details</h3></p>
 
                     <form className="form form-group form-primary" onSubmit={submitDeletePension}>
-                        <input className="form-control mt-4" type="number" id="pensioner_id" name="pensioner_id" value={pensioner_id} onChange={handlePension} placeholder="Enter Pensioner Id to delete the details" />
+                        <input className="form-control mt-4" type="number"  pattern="[0-9]" min='1' id="pensioner_id" name="pensioner_id" value={pensioner_id} onChange={handlePension} placeholder="Enter Pensioner Id to delete the details" required autoFocus/>
                         <input className="form-control mt-4 btn btn-danger" type="submit" value="Remove Pension Details" />
                     </form>
 
@@ -168,11 +168,11 @@ const PensionDetails = props => {
                     <div className="col-6 border border-light shadow p-3 mb-5 bg-white amresh">
                         <p><h3>Add Pension Details</h3></p>
 
-                        <input className="form-control mt-3" type="text" id="pensioner_id" name="pensioner_id" value={newPensionObj.setPensioner_id} onChange={handleAddPension} placeholder="Enter Pensioner_id" />
-                        <input className="form-control mt-3" type="number" id="amount" name="amount" value={newPensionObj.amount} onChange={handleAddPension} placeholder="Enter amount" />
-                        <input className="form-control mt-3" type="number" id="charges" name="charges" value={newPensionObj.charges} onChange={handleAddPension} placeholder="Enter bank charges" />
-                        <input className="form-control mt-3" type="text" id="pan" name="pan" value={newPensionObj.bankType} onChange={handleAddPension} placeholder="Enter bank type" />
-                        <input className="form-control mt-3" type="number" id="salary" name="salary" value={newPensionObj.statusCode} onChange={handleAddPension} placeholder="Enter Status code" />
+                        <input className="form-control mt-3" type="number"  pattern="[0-9]" min='1' id="pensioner_id" name="pensioner_id" value={newPensionObj.setPensioner_id} onChange={handleAddPension} placeholder="Enter Pensioner_id" required autoFocus/>
+                        <input className="form-control mt-3" type="number"  pattern="[0-9]" min='1'id="amount" name="amount" value={newPensionObj.amount} onChange={handleAddPension} placeholder="Enter amount" required autoFocus/>
+                        <input className="form-control mt-3" type="number"  pattern="[0-9]" min='500' max='550' id="charges" name="charges" value={newPensionObj.charges} onChange={handleAddPension} placeholder="Enter bank charges" required autoFocus/>
+                        <input className="form-control mt-3" type="text" id="pan" name="pan" value={newPensionObj.bankType} onChange={handleAddPension} placeholder="Enter bank type" required autoFocus/>
+                        <input className="form-control mt-3" type="number" pattern="[0-9]" min='1' id="salary" name="salary" value={newPensionObj.statusCode} onChange={handleAddPension} placeholder="Enter Status code" required autoFocus/>
                         <input className="form-control mt-3 btn btn-primary" type="submit" value="Add Pension" onClick={addPension} />
 
                     </div>
@@ -188,12 +188,12 @@ const PensionDetails = props => {
                 <div className="col-6 border border-light shadow p-3 mb-5 bg-white amresh">
                     <p><h3>Update Pension Details</h3></p>
 
-                    <input className="form-control mt-3" type="number" id="pensioner_id" name="pensioner_id" value={updatePensionDetails.pensioner_id} onChange={handleUpdatePension} placeholder="Enter Pensioner_id" />
-                    <input className="form-control mt-3" type="number" id="amount" name="amount" value={updatePensionDetails.amount} onChange={handleUpdatePension} placeholder="Enter amount" />
+                    <input className="form-control mt-3" type="number" pattern="[0-9]" min='1' id="pensioner_id" name="pensioner_id" value={updatePensionDetails.pensioner_id} onChange={handleUpdatePension} placeholder="Enter Pensioner_id" required autoFocus/>
+                    <input className="form-control mt-3" type="number" pattern="[0-9]" min='1' id="amount" name="amount" value={updatePensionDetails.amount} onChange={handleUpdatePension} placeholder="Enter amount" required autoFocus/>
 
-                    <input className="form-control mt-3" type="number" id="charges" name="charges" value={updatePensionDetails.charges} onChange={handleUpdatePension} placeholder="Enter Charges" />
-                    <input className="form-control mt-3" type="text" id="bankType" name="bankType" value={updatePensionDetails.bankType} onChange={handleUpdatePension} placeholder="Enter bank type" />
-                    <input className="form-control mt-3" type="number" id="statusCode" name="statusCode" value={updatePensionDetails.statusCode} onChange={handleUpdatePension} placeholder="Enter statuscode" />
+                    <input className="form-control mt-3" type="number" pattern="[0-9]" min='1'id="charges" name="charges" value={updatePensionDetails.charges} onChange={handleUpdatePension} placeholder="Enter Charges" required autoFocus/>
+                    <input className="form-control mt-3" type="text" id="bankType" name="bankType" value={updatePensionDetails.bankType} onChange={handleUpdatePension} placeholder="Enter bank type" required autoFocus/>
+                    <input className="form-control mt-3" type="number" id="statusCode" name="statusCode" value={updatePensionDetails.statusCode} onChange={handleUpdatePension} placeholder="Enter statuscode" required autoFocus/>
 
                     <input className="form-control mt-3 btn btn-warning" type="submit" value="UpdatePension" onClick={updatePension} />
                     <table className="table w-auto small table table-light table-striped ">

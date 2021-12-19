@@ -109,14 +109,14 @@ const BankData = (props) => {
 
 
                 {/* <form className="form form-group form-primary" onSubmit={addbankdetails}> */}
-                <input className="form-control mt-3" type="number" pattern="[0-9]" class="form-control" id="accno" name="accno" value={newBankObj.accno} onChange={handleAddbank} placeholder="Enter accno" required autoFocus />
-                <input className="form-control mt-3" type="text" pattern="[a-zA-Z]{2,7}$" class="form-control" id="bankName" name="bankName" value={newBankObj.bankName} onChange={handleAddbank} placeholder="Enter bankName " required autoFocus />
-                <input className="form-control mt-3" type="text" pattern="[a-zA-Z]{2,7}$" class="form-control" id="branch" name="branch" value={newBankObj.branch} onChange={handleAddbank} placeholder="Enter branch " required autoFocus />
-                <input className="form-control mt-3" type="text" pattern="[a-zA-Z]{3,10}$" class="form-control" id="accHolderName" name="accHolderName" value={newBankObj.accHolderName} onChange={handleAddbank} placeholder="Enter accHolderName " required autoFocus />
-                <input className="form-control mt-3" type="text" pattern="[A-Z]{1,5}0[A-Z0-9]{1,5}$" class="form-control" id="ifscCode" name="ifscCode" value={newBankObj.ifscCode} onChange={handleAddbank} placeholder="Enter ifsccode" required autoFocus />
+                <input className="form-control mt-4" type="number" pattern="[0-9]{10}" min='1' class="form-control" id="accno" name="accno" value={newBankObj.accno} onChange={handleAddbank} placeholder="Enter accno" required autoFocus />
+                <input className="form-control mt-4" type="text" pattern="[a-zA-Z]{2,7}$" class="form-control" id="bankName" name="bankName" value={newBankObj.bankName} onChange={handleAddbank} placeholder="Enter bankName " required autoFocus />
+                <input className="form-control mt-4" type="text" pattern="[a-zA-Z]{2,7}$" class="form-control" id="branch" name="branch" value={newBankObj.branch} onChange={handleAddbank} placeholder="Enter branch " required autoFocus />
+                <input className="form-control mt-4" type="text" pattern="[a-zA-Z]{3,10}$" class="form-control" id="accHolderName" name="accHolderName" value={newBankObj.accHolderName} onChange={handleAddbank} placeholder="Enter accHolderName " required autoFocus />
+                <input className="form-control mt-4" type="text" pattern="[A-Z]{1,5}0[A-Z0-9]{1,5}$" class="form-control" id="ifscCode" name="ifscCode" value={newBankObj.ifscCode} onChange={handleAddbank} placeholder="Enter ifsccode" required autoFocus />
 
 
-                <input className="form-control mt-3 btn btn-primary" type="submit" value="Add Bank" onClick={addbankdetails} />
+                <input className="form-control mt-4 btn btn-primary" type="submit" value="Add Bank" onClick={addbankdetails} />
                 {/* </form> */}
                 <table className="table table-sm table-light table-striped">
                     <thead>
@@ -150,8 +150,8 @@ const BankData = (props) => {
             <div className="col-6 border border-light shadow p-3 mb-5 bg-white amresh">
                 <p>Search Bank Account</p>
                 <form className="form form-group form-primary" onSubmit={submitGetBankById}>
-                    <input className="form-control mt-3" type="number" id="accno" name="accno" value={accno} onChange={handleBank} placeholder="Enter accno to search" />
-                    <input className="form-control mt-3 btn btn-primary" type="submit" value="Find Bank" />
+                    <input className="form-control mt-4" type="number" pattern="[0-9]{10}" min='1' id="accno" name="accno" value={accno} onChange={handleBank} placeholder="Enter accno to search" />
+                    <input className="form-control mt-4 btn btn-primary" type="submit" value="Find Bank" />
                 </form>
                 <table className="table w-auto small table table-light table-striped ">
                     <thead>
@@ -185,7 +185,7 @@ const BankData = (props) => {
                 <div className="col-6 border border-light shadow p-3 mb-5 bg-white amresh">
                     <p>Remove Bank Account</p>
                     <form className="form form-group form-primary" onSubmit={submitDeleteBankById}>
-                        <input className="form-control mt-4" type="number" id="accno" name="accno" value={accno} onChange={handleBank} placeholder="Enter accno to Delete" />
+                        <input className="form-control mt-4" type="number" pattern="[0-9]{10}" min='1' id="accno" name="accno" value={accno} onChange={handleBank} placeholder="Enter accno to Delete" />
                         <input className="form-control mt-4 btn btn-danger" type="submit" value="Remove Bank" />
                     </form>
 
@@ -202,15 +202,15 @@ const BankData = (props) => {
             {/* <p>-------------------------------------------------</p> */}
             <div className="containing">
                 <div className="col-6 border border-light shadow p-3 mb-5 bg-white amresh">
-                    <p>update Bank Account</p>
+                    <p>Update Bank Account</p>
 
-                    <input className="form-control mt-3" type="text" pattern="[0-9]" class="form-control" id="accno" name="accno" value={updateBank.accno} onChange={handleUpdateBank} placeholder="Enter accno to" />
-                    <input className="form-control mt-3" type="text" pattern="[a-zA-Z]{2,7}$" class="form-control" id="bankName" name="bankName" value={updateBank.bankName} onChange={handleUpdateBank} placeholder="Enter bankName to " />
-                    <input className="form-control mt-3" type="text" pattern="[a-zA-Z]{2,7}$" class="form-control" id="branch" name="branch" value={updateBank.branch} onChange={handleUpdateBank} placeholder="Enter branch to " />
-                    <input className="form-control mt-3" type="text" pattern="[a-zA-Z]{3,10}$" class="form-control" id="accHolderName" name="accHolderName" value={updateBank.accHolderName} onChange={handleUpdateBank} placeholder="Enter accHolderName to" />
-                    <input className="form-control mt-3" type="text" pattern="[A-Z]{1,5}0[A-Z0-9]{1,5}$" class="form-control" id="ifscCode" name="ifscCode" value={updateBank.ifscCode} onChange={handleUpdateBank} placeholder="Enter ifsccodeto " />
+                    <input className="form-control mt-4" type="text" pattern="[0-9]{10}" min='1' class="form-control" id="accno" name="accno" value={updateBank.accno} onChange={handleUpdateBank} placeholder="Enter accno to" />
+                    <input className="form-control mt-4" type="text" pattern="[a-zA-Z]{2,7}$" class="form-control" id="bankName" name="bankName" value={updateBank.bankName} onChange={handleUpdateBank} placeholder="Enter bankName to " />
+                    <input className="form-control mt-4" type="text" pattern="[a-zA-Z]{2,7}$" class="form-control" id="branch" name="branch" value={updateBank.branch} onChange={handleUpdateBank} placeholder="Enter branch to " />
+                    <input className="form-control mt-4" type="text" pattern="[a-zA-Z]{3,10}$" class="form-control" id="accHolderName" name="accHolderName" value={updateBank.accHolderName} onChange={handleUpdateBank} placeholder="Enter accHolderName to" />
+                    <input className="form-control mt-4" type="text" pattern="[A-Z]{1,5}0[A-Z0-9]{1,5}$" class="form-control" id="ifscCode" name="ifscCode" value={updateBank.ifscCode} onChange={handleUpdateBank} placeholder="Enter ifsccodeto " />
 
-                    <input className="form-control mt-3 btn btn-primary" type="submit" value="Update Bank" onClick={updatebankdetails} />
+                    <input className="form-control mt-4 btn btn-primary" type="submit" value="Update Bank" onClick={updatebankdetails} />
                     <table className="table w-auto small table table-light table-striped ">
                         <thead>
                             <tr>
