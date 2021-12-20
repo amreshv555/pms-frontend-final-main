@@ -35,7 +35,7 @@ const ProcessPensionModule = () => {
 
 
     return (
-        <div className="containing1">
+        <div className="containing">
             <div className="col-5 border border-light shadow p-3 mb-5 bg-white wi5">
                 <form className="form form-group form-primary" onSubmit={submitGetPension}>
                     <input className="form-control mt-3" type="text" id="name" name="name" value={newPensionObj.name} onChange={handlePension} placeholder="Enter name" autoFocus required />

@@ -100,7 +100,7 @@ const BankData = (props) => {
 
 
     return (
-        <div className="containing">
+        <div className="containing body1">
             {/* <h1 className="display-5 text-warning mt-5 mb-5" >Bank Component</h1> */}
 
 
@@ -200,8 +200,8 @@ const BankData = (props) => {
 
 
             {/* <p>-------------------------------------------------</p> */}
-            <div className="containing">
-                <div className="col-6 border border-light shadow p-3 mb-5 bg-white amresh">
+            <div className="containing ">
+                <div className="col-6 border border-light shadow p-3 mb-5 bg-white ambottom">
                     <p>Update Bank Account</p>
 
                     <input className="form-control mt-4" type="text" pattern="[0-9]{10}" min='1' class="form-control" id="accno" name="accno" value={updateBank.accno} onChange={handleUpdateBank} placeholder="Enter accno to" />

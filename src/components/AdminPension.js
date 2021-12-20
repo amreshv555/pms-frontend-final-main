@@ -109,7 +109,7 @@ const PensionDetails = props => {
 
     return (
 
-        <div className="containing1">
+        <div className="containing">
 
             <div className="col-5 border border-light shadow p-3 mb-5 bg-white wi5">
                 <p><h3>Display Pension Details</h3></p>
@@ -171,7 +171,7 @@ const PensionDetails = props => {
                         <input className="form-control mt-3" type="number"  pattern="[0-9]" min='1' id="pensioner_id" name="pensioner_id" value={newPensionObj.setPensioner_id} onChange={handleAddPension} placeholder="Enter Pensioner_id" required autoFocus/>
                         <input className="form-control mt-3" type="number"  pattern="[0-9]" min='1'id="amount" name="amount" value={newPensionObj.amount} onChange={handleAddPension} placeholder="Enter amount" required autoFocus/>
                         <input className="form-control mt-3" type="number"  pattern="[0-9]" min='500' max='550' id="charges" name="charges" value={newPensionObj.charges} onChange={handleAddPension} placeholder="Enter bank charges" required autoFocus/>
-                        <input className="form-control mt-3" type="text" id="pan" name="pan" value={newPensionObj.bankType} onChange={handleAddPension} placeholder="Enter bank type" required autoFocus/>
+                        <input className="form-control mt-3" type="text" id="bankType" name="bankType" value={newPensionObj.bankType} onChange={handleAddPension} placeholder="Enter bank type" required autoFocus/>
                         <input className="form-control mt-3" type="number" pattern="[0-9]" min='1' id="salary" name="salary" value={newPensionObj.statusCode} onChange={handleAddPension} placeholder="Enter Status code" required autoFocus/>
                         <input className="form-control mt-3 btn btn-primary" type="submit" value="Add Pension" onClick={addPension} />
 

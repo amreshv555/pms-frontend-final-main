@@ -11,98 +11,92 @@ const Header = () => {
         setLoginRole(sessionStorage.getItem('whoIsLoggedIn'));
     }, []);
     if (loginStatus) {
-    if (loginRole=='ADMIN') {
-        return (
-            <header class="header sticky-top">
-                <nav class="navbar navbar-fixed-top navbar-expand-lg ">
-                    <div class="container">
-                        <Link className="navbar-brand" to="/">
-                            <h1 className="poonji">POO<span className="N">N</span>J<span className="I">I</span></h1>
-                        </Link>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarResponsive">
-                            <ul class="navbar-nav ml-auto">
-                                {/* <li className="nav-item">
+        if (loginRole == 'ADMIN') {
+            return (
+                <header class="header sticky-top">
+                    <nav class="navbar navbar-fixed-top navbar-expand-lg ">
+                        <div class="container">
+                            <Link className="navbar-brand" to="/">
+                                <h1 className="poonji">POO<span className="N">N</span>J<span className="I">I</span></h1>
+                            </Link>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarResponsive">
+                                <ul class="navbar-nav ml-auto">
+
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/adminBank" >Banking</Link>
+                                    </li>
+
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/adminPension" >Pension</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/adminPensioner" >Pensioner</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/adminProcessPension" >Money</Link>
+                                    </li>
+
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/logout" >Logout</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+            );
+        }
+        else if (loginRole == 'PENSIONER') {
+            return (
+                <header class="header sticky-top">
+                    <nav class="navbar navbar-fixed-top navbar-expand-lg ">
+                        <div class="container">
+                            <Link className="navbar-brand" to="/">
+                                <h1 className="poonji">POO<span className="N">N</span>J<span className="I">I</span></h1>
+                            </Link>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarResponsive">
+                                <ul class="navbar-nav ml-auto">
+                                    {/* <li className="nav-item">
                                     <Link className="nav-link" to="/hello" >Hello</Link>
                                 </li> */}
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/adminBank" >Banking</Link>
-                                </li>
-                                {/* <li className="nav-item">
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/bankData" >Banking</Link>
+                                    </li>
+                                    {/* <li className="nav-item">
                                     <Link className="nav-link" to="/emp" >Emp</Link>
                                 </li> */}
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/adminPension" >Pension</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/adminPensioner" >Pensioner</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/adminProcessPension" >Money</Link>
-                                </li>
-                                {/* <li className="nav-item">
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/pension" >Pension</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/pensioner" >Pensioner</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/processPension" >Money</Link>
+                                    </li>
+                                    {/* <li className="nav-item">
                                     <Link className="nav-link" to="/spring" >Spring</Link>
                                 </li> */}
-                                
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/logout" >Logout</Link>
-                                </li>
-                            </ul>
+
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/logout" >Logout</Link>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                </nav>
-            </header>
-        );
+                    </nav>
+                </header>
+            );
+        } else {
+            return null;
+        }
     }
-   else if (loginRole=='PENSIONER') {
-        return (
-            <header class="header sticky-top">
-                <nav class="navbar navbar-fixed-top navbar-expand-lg ">
-                    <div class="container">
-                        <Link className="navbar-brand" to="/">
-                            <h1 className="poonji">POO<span className="N">N</span>J<span className="I">I</span></h1>
-                        </Link>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarResponsive">
-                            <ul class="navbar-nav ml-auto">
-                                {/* <li className="nav-item">
-                                    <Link className="nav-link" to="/hello" >Hello</Link>
-                                </li> */}
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/bankData" >Banking</Link>
-                                </li>
-                                {/* <li className="nav-item">
-                                    <Link className="nav-link" to="/emp" >Emp</Link>
-                                </li> */}
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/pension" >Pension</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/pensioner" >Pensioner</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/processPension" >Money</Link>
-                                </li>
-                                {/* <li className="nav-item">
-                                    <Link className="nav-link" to="/spring" >Spring</Link>
-                                </li> */}
-                                
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/logout" >Logout</Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-        );
-    }else {
-        return null;
-    }}
     else {
         return (
             <header class="header sticky-top">

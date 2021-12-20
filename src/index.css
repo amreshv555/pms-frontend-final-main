@@ -66,7 +66,8 @@ code {
     monospace;
 }
 body{
-  background-image: linear-gradient(to right, #ff5722,#ff9800);
+  background-image: linear-gradient(to right,#355C7D,#f8b195);
+  margin-bottom: 50px;
 }
 .register-left{
   text-align: center;
@@ -269,7 +270,7 @@ table{
   left: 300px;
   bottom: 50px;
   top: 50px;
-  padding-bottom: 25px;
+;
   
 }
 .wi5{
@@ -277,6 +278,13 @@ table{
   left: 385px;
   bottom: 50px;
   top: 50px;
-  padding-bottom: 25px;
+ ;
   
+}
+.ambottom{
+  position: relative;
+  left: 300px;
+  bottom: 50px;
+  top: 50px;
+  ;
 }
